@@ -38,7 +38,7 @@ public sealed partial class RMCChangePillBottleColorBui : BoundUserInterface
     {
         var newSelectedColor = (PillbottleColor)args.ItemList[args.ItemIndex].Metadata!;
 
-        if (newSelectedColor is { } newColor)
+        if (newSelectedColor is var newColor)
         {
             ChangeColor(newColor);
             Close();
